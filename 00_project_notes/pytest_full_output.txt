@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.11, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\DeLL\AppData\Local\Programs\Python\Python310\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Downloads\Radiation modelling
+plugins: anyio-4.11.0, langsmith-0.8.15, locust-2.40.4
+collecting ... collected 12 items
+
+tests/test_biology_outputs.py::test_biology_outputs_and_flags PASSED     [  8%]
+tests/test_biology_outputs.py::test_parameters_exist PASSED              [ 16%]
+tests/test_file_structure.py::test_raw_folders_exist PASSED              [ 25%]
+tests/test_file_structure.py::test_key_csvs_exist PASSED                 [ 33%]
+tests/test_neural_outputs.py::test_neural_firing_rates PASSED            [ 41%]
+tests/test_neural_outputs.py::test_dashboard_syntax PASSED               [ 50%]
+tests/test_no_nan_in_required_outputs.py::test_no_nan_in_forcing PASSED  [ 58%]
+tests/test_no_nan_in_required_outputs.py::test_no_nan_in_biology PASSED  [ 66%]
+tests/test_no_nan_in_required_outputs.py::test_no_nan_in_neural PASSED   [ 75%]
+tests/test_no_nan_in_required_outputs.py::test_effective_dose_flagged PASSED [ 83%]
+tests/test_physics_outputs.py::test_physics_dose_non_negative PASSED     [ 91%]
+tests/test_physics_outputs.py::test_scenario_counts PASSED               [100%]
+
+============================= 12 passed in 1.66s ==============================

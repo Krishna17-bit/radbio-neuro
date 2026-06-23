@@ -1,0 +1,4 @@
+run,layers,total_thickness_g_cm2,effective_dose_Sv,error_Sv,usable_numeric_effective_dose,source_file
+LEO_trapped_10k,1,5.320000E+00,NaN,NaN,False,05_leo_effective_dose_trapped/15_effective_dose_output_trapped_10k.txt
+LEO_trapped_100k,1,5.320000E+00,NaN,NaN,False,05_leo_effective_dose_trapped/19_effective_dose_output_trapped_100k.txt
+VAB_trapped_10k,1,5.320000E+00,NaN,NaN,False,10_vab_effective_dose_trapped/36_vab_effective_dose_output_trapped_10k.txt

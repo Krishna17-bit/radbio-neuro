@@ -1,0 +1,143 @@
+d:\Downloads\Radiation modelling
++---00_project_notes
+|   +---README_DATASET.txt
+|   +---folder_structure.txt
+|   \---folder_structure_final.txt
++---01_SPENVIS_RAW_DATA
+|   +---01_leo_orbit
+|   |   +---01_orbit_report.txt
+|   |   +---02_spacecraft_coordinates.txt
+|   |   \---03_attitude_vectors.txt
+|   +---02_leo_trapped_radiation
+|   |   +---04_trapped_radiation_report.txt
+|   |   +---05_avg_proton_electron_fluxes.txt
+|   |   +---06_trapped_proton_spectra_orbit.txt
+|   |   +---07_trapped_electron_spectra_orbit.txt
+|   |   +---08_proton_peak_fluxes.txt
+|   |   \---09_electron_peak_fluxes.txt
+|   +---03_leo_gcr
+|   |   +---10_gcr_report_iso15390_solarmin_H_to_U.txt
+|   |   \---11_gcr_proton_ion_fluxes_iso15390_solarmin_H_to_U.txt
+|   +---04_leo_ionizing_dose_tissue
+|   |   +---12_ionizing_dose_report_shieldose2_tissue.txt
+|   |   \---13_total_mission_doses_shieldose2_tissue.txt
+|   +---05_leo_effective_dose_trapped
+|   |   +---14_effective_dose_report_trapped_10k.txt
+|   |   +---15_effective_dose_output_trapped_10k.txt
+|   |   +---16_mulassis_multilayer_output_trapped_10k.txt
+|   |   +---17_mulassis_macro_trapped_10k.mac
+|   |   +---18_effective_dose_report_trapped_100k.txt
+|   |   +---19_effective_dose_output_trapped_100k.txt
+|   |   +---20_mulassis_multilayer_output_trapped_100k.txt
+|   |   \---21_mulassis_macro_trapped_100k.mac
+|   +---06_vab_orbit
+|   |   +---22_vab_orbit_report.txt
+|   |   +---23_vab_spacecraft_coordinates.txt
+|   |   \---24_vab_attitude_vectors.txt
+|   +---07_vab_trapped_radiation
+|   |   +---25_vab_trapped_radiation_report.txt
+|   |   +---26_vab_avg_proton_electron_fluxes.txt
+|   |   +---27_vab_trapped_proton_spectra_orbit.txt
+|   |   +---28_vab_trapped_electron_spectra_orbit.txt
+|   |   +---29_vab_proton_peak_fluxes.txt
+|   |   \---30_vab_electron_peak_fluxes.txt
+|   +---08_vab_gcr
+|   |   +---31_vab_gcr_report_iso15390_solarmin_H_to_U.txt
+|   |   \---32_vab_gcr_proton_ion_fluxes_iso15390_solarmin_H_to_U.txt
+|   +---09_vab_ionizing_dose_tissue
+|   |   +---33_vab_ionizing_dose_report_shieldose2_tissue.txt
+|   |   \---34_vab_total_mission_doses_shieldose2_tissue.txt
+|   \---10_vab_effective_dose_trapped
+|       +---35_vab_effective_dose_report_trapped_10k.txt
+|       +---36_vab_effective_dose_output_trapped_10k.txt
+|       +---37_vab_mulassis_multilayer_output_trapped_10k.txt
+|       \---38_vab_mulassis_macro_trapped_10k.mac
++---02_RADBIO_NEURO_001_PHYSICS_LAYER
+|   \---RADBIO_NEURO_001_NOTEBOOK_BUILD
+|       +---RADBIO_NEURO_001_physics_to_biology_analysis.py
+|       +---RADBIO_NEURO_001_physics_to_biology_notebook.ipynb
+|       +---README_FIRST_PASS.md
+|       +---README_NOTEBOOK_BUILD.md
+|       +---data
+|       |   +---effective_dose_output_audit.csv
+|       |   +---file_audit.csv
+|       |   +---leo_vs_vab_shieldose2_comparison.csv
+|       |   +---selected_shielding_depth_summary.csv
+|       |   \---shieldose2_tissue_dose_by_shielding.csv
+|       +---figures
+|       |   +---biology_ready_dose_rate_vs_shielding_mGy_day.png
+|       |   +---dose_vs_shielding_total_Gy_log.png
+|       |   +---firstpass_dose_vs_shielding_proton_Gy.png
+|       |   +---firstpass_dose_vs_shielding_total_Gy.png
+|       |   +---firstpass_vab_to_leo_total_dose_ratio.png
+|       |   +---prototype_endpoint_neural_risk_proxy.png
+|       |   \---prototype_ros_mito_timecourse_10mm.png
+|       \---outputs
+|           +---biology_ready_dose_forcing_table.csv
+|           +---prototype_ros_mito_daily_timecourses.csv
+|           +---prototype_ros_mito_endpoints_selected_shielding.csv
+|           \---selected_shielding_dose_rate_summary.csv
++---03_RADBIO_NEURO_002_BIOLOGY_CALIBRATION
+|   \---RADBIO_NEURO_002_BIOLOGY_CALIBRATION
+|       \---RADBIO_NEURO_002_BIOLOGY_CALIBRATION
+|           +---RADBIO_NEURO_002_biology_calibration_layer.ipynb
+|           +---README_RADBIO_NEURO_002.md
+|           +---calibrated_ros_mito_model.py
+|           +---data
+|           |   +---biology_ready_dose_forcing_table.csv
+|           |   +---parameter_provenance.csv
+|           |   \---validation_targets.csv
+|           +---figures
+|           |   +---excitability_vs_shielding.png
+|           |   +---ltp_proxy_vs_shielding.png
+|           |   +---mito_integrity_vs_shielding.png
+|           |   +---model_vs_validation_targets.png
+|           |   +---timecourse_excitability_10mm.png
+|           |   +---timecourse_mito_10mm.png
+|           |   \---timecourse_ros_10mm.png
+|           +---outputs
+|           |   +---biology_calibrated_daily_timecourses_all_scenarios.csv
+|           |   +---biology_calibrated_endpoint_predictions.csv
+|           |   +---calibrated_parameters.json
+|           |   +---model_vs_validation_targets.csv
+|           |   \---selected_shielding_biology_summary.csv
+|           +---requirements.txt
+|           +---run_biology_calibration.py
+|           \---src
+|               \---calibrated_ros_mito_model.py
++---04_RADBIO_NEURO_003_NEURAL_LAYER
+|   \---RADBIO_NEURO_003_NEURAL_LAYER
+|       \---RADBIO_NEURO_003_NEURAL_LAYER
+|           +---METHOD_NEURAL_LAYER.md
+|           +---RADBIO_NEURO_003_brian2_neural_layer.ipynb
+|           +---README_RADBIO_NEURO_003.md
+|           +---data
+|           |   +---biology_calibrated_daily_timecourses_all_scenarios.csv
+|           |   +---biology_calibrated_endpoint_predictions.csv
+|           |   +---biology_ready_dose_forcing_table.csv
+|           |   +---calibrated_parameters.json
+|           |   +---parameter_provenance.csv
+|           |   +---selected_shielding_biology_summary.csv
+|           |   \---validation_targets.csv
+|           +---figures
+|           |   +---effective_drive_vs_shielding.png
+|           |   +---endpoint_firing_rate_vs_shielding.png
+|           |   +---raster_LEO_ISS_like_10mm.png
+|           |   +---raster_VAB_RBSP_like_10mm.png
+|           |   +---raster_healthy_control.png
+|           |   +---timecourse_firing_rate_10mm.png
+|           |   +---voltage_LEO_ISS_like_10mm.png
+|           |   +---voltage_VAB_RBSP_like_10mm.png
+|           |   \---voltage_healthy_control.png
+|           +---neural_layer_model.py
+|           +---outputs
+|           |   +---healthy_control_neural_summary.csv
+|           |   +---neural_endpoint_simulation_summary.csv
+|           |   +---neural_timecourse_10mm_summary.csv
+|           |   \---pipeline_status_flags.csv
+|           +---requirements.txt
+|           +---run_neural_layer.py
+|           \---src
+|               \---neural_layer_model.py
++---05_PRODUCT_DASHBOARD_API
+\---99_ARCHIVES

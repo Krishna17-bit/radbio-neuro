@@ -1,0 +1,16 @@
+{
+  "k_ros_prod": 0.4407583879846597,
+  "k_ros_clear": 0.5186984283303715,
+  "ros_ec50": 0.7641191312025469,
+  "ref_dose_rate_mGy_day": 1.0,
+  "k_mito_damage": 0.0008487195257346425,
+  "k_mito_ros_amplification": 0.007891641052177212,
+  "k_mito_repair": 0.0018296083472930285,
+  "atp_exponent": 1.228727809124347,
+  "fast_excitability_gain": 0.04628722865370708,
+  "slow_suppression_gain": 1.4891395982840836,
+  "ltp_mito_gain": 1.8660405899719297,
+  "ltp_ros_gain": 0.06207487867330282,
+  "min_excitability_ratio": 0.0,
+  "max_excitability_ratio": 2.0
+}

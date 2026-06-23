@@ -1,0 +1,29 @@
+============================================================
+STARTING RADBIO_NEURO INTEGRATED PIPELINE RUNNER
+============================================================
+
+[1/5] Executing Physics Layer...
+ - Audit effective dose. Any usable Sievert values? False
+ - MC effective dose contains NaNs and is unusable. Falling back to SHIELDOSE-2 tissue absorbed dose.
+ - Saved biology-ready dose forcing table to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\outputs\biology_ready_dose_forcing_table.csv
+ - Saved physics plots to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\figures
+
+[2/5] Executing Biology Calibration Layer...
+ - Calibrated params: RosMitoParams(k_ros_prod=0.4407583879846597, k_ros_clear=0.5186984283303715, ros_ec50=0.7641191312025469, ref_dose_rate_mGy_day=1.0, k_mito_damage=0.0008487195257346425, k_mito_ros_amplification=0.007891641052177212, k_mito_repair=0.0018296083472930285, atp_exponent=1.228727809124347, fast_excitability_gain=0.04628722865370708, slow_suppression_gain=1.4891395982840836, ltp_mito_gain=1.8660405899719297, ltp_ros_gain=0.06207487867330282, min_excitability_ratio=0.0, max_excitability_ratio=2.0)
+ - Saved biology calibrated endpoint predictions to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\outputs
+ - Saved biology plots to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\figures
+
+[3/5] Executing Neural Simulation Layer...
+ - Saved neural simulation outputs to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\outputs
+ - Saved neural network plots (rasters & voltage traces) to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\figures
+
+[4/5] Saving scientific flags & status logs...
+ - Saved status flags to D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\outputs\pipeline_status_flags.csv
+
+[5/5] Generating Integrated Reports...
+Generated integrated HTML report at D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\reports\RADBIO_NEURO_integrated_report.html
+Generated integrated summary MD report at D:\Downloads\Radiation modelling\06_INTEGRATED_PIPELINE\reports\RADBIO_NEURO_integrated_summary.md
+
+============================================================
+INTEGRATED PIPELINE RUN COMPLETED SUCCESSFULLY.
+============================================================

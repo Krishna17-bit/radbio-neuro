@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADBIO_NEURO Integrated Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 28, 45, 0.6);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary: #3b82f6;
+            --accent: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #090d16 0%, #151c30 100%);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(90deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .disclaimer-banner {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            color: #fca5a5;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        table.dataframe {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        table.dataframe th, table.dataframe td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        table.dataframe th {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        
+        table.dataframe tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        
+        .img-box {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .img-box img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            color: #fde047;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RADBIO_NEURO Modelling Report</h1>
+        <p style="color: var(--text-muted); margin: 0;">Automated pipeline run results & diagnostic verification summaries</p>
+    </header>
+    
+    <div class="container">
+        <div class="disclaimer-banner">
+            ⚠️ WARNING: Research prototype only. Not for medical, operational, or astronaut health decision-making. No clinical diagnostic claims are validated.
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h2>1. Environment & Physics Layer <span style="font-size:0.8rem; color:var(--text-muted)">RADBIO_NEURO_001</span></h2>
+                <p>The SPENVIS effective-dose Monte Carlo results contain non-numeric NaN values. To prevent erroneous biological projections, the pipeline automatically falls back to <strong>SHIELDOSE-2 tissue absorbed dose</strong> rates.</p>
+                <div class="warning-box">
+                    <strong>Physics Audit Status:</strong> Monte Carlo Sv data is marked UNUSABLE. Fallback absorbed dose is currently active.
+                </div>
+                <h3>Absorbed Dose Summary Table</h3>
+                <table border="1" class="dataframe dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>scenario</th>
+      <th>shield_mm_Al</th>
+      <th>total_dose_Gy</th>
+      <th>total_dose_rate_mGy_day</th>
+      <th>forcing_regime_label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>1.0</td>
+      <td>12.07200</td>
+      <td>67.066667</td>
+      <td>high_model_forcing</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>2.0</td>
+      <td>4.44830</td>
+      <td>24.712778</td>
+      <td>high_model_forcing</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>5.0</td>
+      <td>0.67828</td>
+      <td>3.768222</td>
+      <td>moderate_model_forcing</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>10.0</td>
+      <td>0.27938</td>
+      <td>1.552111</td>
+      <td>moderate_model_forcing</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>20.0</td>
+      <td>0.20255</td>
+      <td>1.125278</td>
+      <td>moderate_model_forcing</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>1.0</td>
+      <td>25203.00000</td>
+      <td>140016.666667</td>
+      <td>extreme_model_forcing</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>2.0</td>
+      <td>6965.10000</td>
+      <td>38695.000000</td>
+      <td>extreme_model_forcing</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>5.0</td>
+      <td>409.61000</td>
+      <td>2275.611111</td>
+      <td>extreme_model_forcing</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>10.0</td>
+      <td>33.78400</td>
+      <td>187.688889</td>
+      <td>extreme_model_forcing</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>20.0</td>
+      <td>18.39300</td>
+      <td>102.183333</td>
+      <td>extreme_model_forcing</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+            
+            <div class="card">
+                <h2>2. Radiation Dose vs Shielding Depth</h2>
+                <div class="img-box">
+                    <img src="../figures/dose_vs_shielding_total_Gy_log.png" alt="Dose vs Shielding Depth">
+                </div>
+                <div class="img-box">
+                    <img src="../figures/biology_ready_dose_rate_vs_shielding_mGy_day.png" alt="Dose Rate vs Shielding">
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h2>3. Biological Calibration Scaffold <span style="font-size:0.8rem; color:var(--text-muted)">RADBIO_NEURO_002</span></h2>
+                <p>The model simulates daily ROS burden index (dimensionless indicator of ROS level, not a bounded 0-1 normalized value), mitochondrial integrity, and ATP levels. It splits acute redox effects from slow bioenergetic decay, fit to literature chronic low-dose benchmarks.</p>
+                <h3>Endpoint Cellular Predictions (Day 180)</h3>
+                <table border="1" class="dataframe dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>scenario</th>
+      <th>shield_mm_Al</th>
+      <th>ros_norm_day_end</th>
+      <th>mito_integrity_day_end</th>
+      <th>atp_proxy_day_end</th>
+      <th>calibration_domain_flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>1.0</td>
+      <td>3.586314</td>
+      <td>0.030324</td>
+      <td>0.013631</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>2.0</td>
+      <td>2.759093</td>
+      <td>0.091993</td>
+      <td>0.053301</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>5.0</td>
+      <td>1.327270</td>
+      <td>0.617675</td>
+      <td>0.553224</td>
+      <td>near_primary_validation_domain</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>10.0</td>
+      <td>0.796138</td>
+      <td>0.817752</td>
+      <td>0.780972</td>
+      <td>near_primary_validation_domain</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>20.0</td>
+      <td>0.640621</td>
+      <td>0.864026</td>
+      <td>0.835620</td>
+      <td>near_primary_validation_domain</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>1.0</td>
+      <td>10.069005</td>
+      <td>0.001830</td>
+      <td>0.000433</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>2.0</td>
+      <td>8.976213</td>
+      <td>0.001830</td>
+      <td>0.000433</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>5.0</td>
+      <td>6.568861</td>
+      <td>0.001830</td>
+      <td>0.000433</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>10.0</td>
+      <td>4.452718</td>
+      <td>0.010974</td>
+      <td>0.003910</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>20.0</td>
+      <td>3.939822</td>
+      <td>0.020050</td>
+      <td>0.008199</td>
+      <td>outside_primary_validation_domain_high_dose_rate</td>
+    </tr>
+  </tbody>
+</table>
+                <div class="warning-box">
+                    <strong>Calibration Domain Notice:</strong> Orbits crossing the radiation belts (VAB) generate dose-rates (>100 mGy/day) far exceeding the chronic validation bounds (~1 mGy/day). These projections are labeled extrapolations.
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>4. Biological Response Figures</h2>
+                <div class="img-box">
+                    <img src="../figures/mito_integrity_vs_shielding.png" alt="Mito Integrity vs Shielding">
+                </div>
+                <div class="img-box">
+                    <img src="../figures/timecourse_ros_10mm.png" alt="ROS Timecourse at 10mm">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>5. Functional Neural Simulation <span style="font-size:0.8rem; color:var(--text-muted)">RADBIO_NEURO_003</span></h2>
+                <p>Cellular ATP and ROS endpoints are mapped to network parameters in a stochastic Leaky Integrate-and-Fire population of 80 neurons. Bioenergetic drive is suppressed by ATP loss, while membrane properties adapt dynamically.</p>
+                <h3>Endpoint Population Firing Results</h3>
+                <table border="1" class="dataframe dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>scenario</th>
+      <th>shield_mm_Al</th>
+      <th>mean_firing_rate_hz</th>
+      <th>tau_eff_ms</th>
+      <th>v_threshold_eff_mV</th>
+      <th>drive_eff_mV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>1.0</td>
+      <td>0.00000</td>
+      <td>8.065969</td>
+      <td>-43.095418</td>
+      <td>2.341152</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>2.0</td>
+      <td>0.00000</td>
+      <td>8.264298</td>
+      <td>-43.373109</td>
+      <td>3.128804</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>5.0</td>
+      <td>0.23125</td>
+      <td>11.974877</td>
+      <td>-46.872571</td>
+      <td>13.192268</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>10.0</td>
+      <td>24.91250</td>
+      <td>15.054103</td>
+      <td>-48.466806</td>
+      <td>17.755829</td>
+    </tr>
+    <tr>
+      <td>LEO_ISS_like</td>
+      <td>20.0</td>
+      <td>29.11875</td>
+      <td>16.044015</td>
+      <td>-48.849337</td>
+      <td>18.841810</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>1.0</td>
+      <td>0.00000</td>
+      <td>8.002077</td>
+      <td>-43.003029</td>
+      <td>2.112936</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>2.0</td>
+      <td>0.00000</td>
+      <td>8.002077</td>
+      <td>-43.003029</td>
+      <td>2.110006</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>5.0</td>
+      <td>0.00000</td>
+      <td>8.002077</td>
+      <td>-43.003029</td>
+      <td>2.100469</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>10.0</td>
+      <td>0.00000</td>
+      <td>8.018811</td>
+      <td>-43.027368</td>
+      <td>2.155192</td>
+    </tr>
+    <tr>
+      <td>VAB_RBSP_like</td>
+      <td>20.0</td>
+      <td>0.00000</td>
+      <td>8.039551</td>
+      <td>-43.057394</td>
+      <td>2.236097</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+            
+            <div class="card">
+                <h2>6. Neural Simulation Firing Results</h2>
+                <div class="img-box">
+                    <img src="../figures/endpoint_firing_rate_vs_shielding.png" alt="Endpoint Firing Rate vs Shielding">
+                </div>
+                <div class="img-box">
+                    <img src="../figures/raster_VAB_RBSP_like_10mm.png" alt="Raster VAB at 10mm">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-top: 3rem;">
+            <h2>7. Scientific Limitations & Actionable Next Steps</h2>
+            <ul>
+                <li><strong>No clinical diagnosis or medical validity:</strong> This prototype is a research-prototype model, not a medical, clinical, astronaut-health, or mission-operation prediction. Do not use for health diagnostics.</li>
+                <li><strong>Monte Carlo Sievert:</strong> Effective-dose Monte Carlo produced NaN values and was audited but not used for biology input. Models must be rerun with fixed parameters to obtain actual high-LET radiation quality equivalent factors. SHIELDOSE-2 tissue absorbed dose is the active physics input.</li>
+                <li><strong>Calibration limitations:</strong> Chronic space radiation biology studies are sparse; model fitting is anchored to only two mouse endpoints. Thin-shielded Van Allen cases are extrapolation outside the primary chronic low-dose validation domain.</li>
+                <li><strong>Validation extension:</strong> Collect and digitize more mouse and cell experimental papers to anchor model constants in multiple tissues.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

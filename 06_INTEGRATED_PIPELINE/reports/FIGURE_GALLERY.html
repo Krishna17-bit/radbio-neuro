@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADBIO_NEURO Figure Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --text: #111827;
+            --text-muted: #6b7280;
+            --primary: #3b82f6;
+            --border: #e5e7eb;
+            --badge-dose: #3b82f6;
+            --badge-bio: #10b981;
+            --badge-neural: #8b5cf6;
+            --badge-val: #f59e0b;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 5%;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 2rem;
+            color: #1f2937;
+        }
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem 1.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .card-content {
+            padding: 1.25rem;
+        }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            word-break: break-all;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+        .badge-dose { background-color: var(--badge-dose); }
+        .badge-bio { background-color: var(--badge-bio); }
+        .badge-neural { background-color: var(--badge-neural); }
+        .badge-val { background-color: var(--badge-val); }
+        .img-container {
+            width: 100%;
+            background: #f9fafb;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0.5rem 0 0 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RADBIO_NEURO Figure Gallery</h1>
+        <div class="meta">
+            <strong>Project Folder:</strong> D:\Downloads\Radiation modelling<br>
+            <strong>Total Figures:</strong> 18 | 
+            <strong>Generated:</strong> 2026-06-23 21:26:29
+        </div>
+    </header>
+    <div class="container">
+        <div style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; line-height: 1.6;">
+            <h2 style="margin-top: 0; font-size: 1.25rem; color: var(--primary); font-weight: 600;">📊 Gallery Scientific Interpretation Overview</h2>
+            <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.95rem; color: #374151;">
+                <li style="margin-bottom: 0.5rem;"><strong>LEO ISS-like Orbit</strong>: Shows a clear, shielding-dependent dose reduction. At deeper shielding depths (e.g. 10 mm Al), modeled cell ROS burden remains low, partial preservation of mitochondrial integrity is achieved, and active population firing rates are preserved.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Van Allen Belt Crossing (VAB)</strong>: Involves extreme, high dose-rate forcing. Behind thin shielding (1 mm or 2 mm Al), complete cellular and network collapse occurs, with modeled ATP depletion shutting down firing.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Blank VAB Raster Plots</strong>: A blank raster represents zero or near-zero population firing under severe extrapolated bioenergetic stress (metabolic shutdown), not missing or broken plot data.</li>
+                <li style="margin-bottom: 0;"><strong>Effective-Dose MC NaN Fallback</strong>: SPENVIS effective-dose Monte Carlo raw files were audited but not used in the pipeline because outputs were non-numeric (NaN). The active physics forcing relies on SHIELDOSE-2 tissue absorbed dose.</li>
+            </ul>
+        </div>
+        <div class="grid">
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/biology_ready_dose_rate_vs_shielding_mGy_day.png" alt="biology_ready_dose_rate_vs_shielding_mGy_day.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-dose">dose / shielding</span>
+                    <h2 class="card-title">biology_ready_dose_rate_vs_shielding_mGy_day.png</h2>
+                    <p class="desc">Biology-ready absorbed tissue dose-rate forcing (mGy/day) across shielding depths.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/dose_vs_shielding_total_Gy_log.png" alt="dose_vs_shielding_total_Gy_log.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-dose">dose / shielding</span>
+                    <h2 class="card-title">dose_vs_shielding_total_Gy_log.png</h2>
+                    <p class="desc">Total absorbed tissue dose (Gy) over 180 days across all shielding depths.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/effective_drive_vs_shielding.png" alt="effective_drive_vs_shielding.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">effective_drive_vs_shielding.png</h2>
+                    <p class="desc">Bioenergetic voltage drive entering integrate-and-fire model vs shielding thickness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/endpoint_firing_rate_vs_shielding.png" alt="endpoint_firing_rate_vs_shielding.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">endpoint_firing_rate_vs_shielding.png</h2>
+                    <p class="desc">Endpoint mean neural network population firing rate (Hz) vs shielding thickness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/excitability_vs_shielding.png" alt="excitability_vs_shielding.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">excitability_vs_shielding.png</h2>
+                    <p class="desc">Endpoint neural excitability ratio (Day 180) vs shielding thickness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/ltp_proxy_vs_shielding.png" alt="ltp_proxy_vs_shielding.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">ltp_proxy_vs_shielding.png</h2>
+                    <p class="desc">Endpoint long-term potentiation (LTP) ratio (Day 180) vs shielding thickness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/mito_integrity_vs_shielding.png" alt="mito_integrity_vs_shielding.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">mito_integrity_vs_shielding.png</h2>
+                    <p class="desc">Endpoint mitochondrial integrity proxy (Day 180) vs shielding thickness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/model_vs_validation_targets.png" alt="model_vs_validation_targets.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-val">validation / flags</span>
+                    <h2 class="card-title">model_vs_validation_targets.png</h2>
+                    <p class="desc">Model predictions compared against experimental/literature validation anchors.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/raster_LEO_ISS_like_10mm.png" alt="raster_LEO_ISS_like_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">raster_LEO_ISS_like_10mm.png</h2>
+                    <p class="desc">Spike raster plot for LEO ISS-like scenario at 10 mm Al shielding.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/raster_VAB_RBSP_like_10mm.png" alt="raster_VAB_RBSP_like_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">raster_VAB_RBSP_like_10mm.png</h2>
+                    <p class="desc">Spike raster plot for extreme Van Allen Belt scenario at 10 mm Al shielding.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/raster_healthy_control.png" alt="raster_healthy_control.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">raster_healthy_control.png</h2>
+                    <p class="desc">Spike raster plot for unexposed healthy control neural network.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/timecourse_excitability_10mm.png" alt="timecourse_excitability_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">timecourse_excitability_10mm.png</h2>
+                    <p class="desc">Excitability ratio daily changes timecourse at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/timecourse_firing_rate_10mm.png" alt="timecourse_firing_rate_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">timecourse_firing_rate_10mm.png</h2>
+                    <p class="desc">Neural network population firing rate (Hz) sampled timecourse at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/timecourse_mito_10mm.png" alt="timecourse_mito_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">timecourse_mito_10mm.png</h2>
+                    <p class="desc">Mitochondrial integrity daily damage/repair timecourse at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/timecourse_ros_10mm.png" alt="timecourse_ros_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-bio">biology / ROS / mitochondria</span>
+                    <h2 class="card-title">timecourse_ros_10mm.png</h2>
+                    <p class="desc">ROS daily accumulation timecourse over 180 days at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/voltage_LEO_ISS_like_10mm.png" alt="voltage_LEO_ISS_like_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">voltage_LEO_ISS_like_10mm.png</h2>
+                    <p class="desc">Membrane potential voltage traces for LEO scenario at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/voltage_VAB_RBSP_like_10mm.png" alt="voltage_VAB_RBSP_like_10mm.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">voltage_VAB_RBSP_like_10mm.png</h2>
+                    <p class="desc">Membrane potential voltage traces for Van Allen Belt scenario at 10 mm Al.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="../figures/voltage_healthy_control.png" alt="voltage_healthy_control.png">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-neural">neural / raster / voltage</span>
+                    <h2 class="card-title">voltage_healthy_control.png</h2>
+                    <p class="desc">Membrane potential voltage traces for healthy control neural population.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

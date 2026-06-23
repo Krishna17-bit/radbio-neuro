@@ -1,0 +1,11 @@
+parameter,value,unit,role,source,validation_status
+dose_rate_mGy_day,from RADBIO_NEURO_001 biology_ready_dose_forcing_table.csv,mGy/day,physics forcing,SPENVIS SHIELDOSE-2 tissue absorbed dose parsed in RADBIO_NEURO_001,"physics-layer parsed; effective-dose MC currently NaN, so absorbed tissue dose only"
+target_chronic_dose_Gy,0.18,Gy,calibration exposure,Acharya et al. eNeuro 2019 chronic 18 cGy over 6 months,primary literature anchor
+target_chronic_dose_rate_mGy_day,1.0,mGy/day,calibration exposure,Acharya et al. eNeuro 2019 chronic 1 mGy/day over 180 days,primary literature anchor
+ros_norm,state variable,dimensionless,acute oxidative stress state,Baulch/Tseng persistent oxidative stress literature; Selivanov mitochondrial ROS modeling concept,structure justified; coefficients calibrated only to scaffold anchors
+mito_integrity,"state variable in [0,1]",dimensionless,chronic mitochondrial injury/repair state,persistent oxidative stress/mitochondrial dysfunction literature; Datta et al. high-LET persistent mitochondrial oxidative stress,structure justified; coefficients require numeric biological fit
+atp_proxy,mito_integrity ** atp_exponent,dimensionless,bioenergetic stress proxy,mitochondrial integrity to ATP/pump failure mechanistic assumption,scaffold assumption pending direct ATP or pump-current data
+fast_excitability_gain,calibrated/default,ratio per ROS saturation,acute ROS/channel oxidation term that can raise excitability,ROS/redox ion-channel literature and NSCC excitability evidence,mechanistic sign only; magnitude provisional
+slow_suppression_gain,calibrated,ratio per ATP loss,chronic mitochondrial/ATP-dependent suppression term,chronic neutron excitability/LTP target,calibrated to approximate target; replace after figure digitization
+ltp_mito_gain,calibrated,ratio per mitochondrial integrity loss,synaptic plasticity proxy suppression,chronic neutron LTP target,calibrated to approximate target; replace after figure digitization
+rbe_quality_factor,1.0 default,dimensionless,future extension for LET/dose-equivalent weighting,Not active because current effective-dose MC output is NaN,placeholder; do not use for biological risk claims yet

@@ -1,0 +1,2 @@
+scenario,shield_mm_Al,day,dose_rate_mGy_day,ros_norm,mito_integrity,atp_proxy,fast_excitability_delta,slow_mito_atp_suppression,tau_eff_ms,v_threshold_eff_mV,drive_eff_mV,mean_firing_rate_hz,total_spikes,synchrony_proxy_cv_10ms_bins,isi_cv_mean,calibration_domain_flag,model_status
+Healthy_control_no_radiation,,0.0,0.0,0.0,1.0,1.0,0.0,0.0,20.0,-50.0,22.0,36.11875,5779,0.17187346675071072,0.18990506611953886,control,simulation_control

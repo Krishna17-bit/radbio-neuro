@@ -1,0 +1,4 @@
+layer,status
+RADBIO_NEURO_001,SPENVIS absorbed tissue dose available; effective dose MC NaN/audit only
+RADBIO_NEURO_002,Biology calibration scaffold available; anchored to chronic low-dose neural target; many cases extrapolative
+RADBIO_NEURO_003,Neural simulation scaffold built; not yet validated against electrophysiology/raster data
