@@ -4,7 +4,7 @@ This document describes the layout of the repository and the roles of individual
 
 ```
 Radiation modelling/
-├── MASTER_README.md
+├── README.md
 ├── PROJECT_STRUCTURE.md
 ├── SCIENTIFIC_LIMITATIONS.md
 ├── DATA_DICTIONARY.md

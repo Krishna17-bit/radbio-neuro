@@ -1,12 +1,13 @@
 Folder PATH listing
 Volume serial number is 1488-F37C
 D:.
+|   .gitignore
 |   create_figure_gallery.py
 |   create_output_audit.py
 |   DATA_DICTIONARY.md
-|   MASTER_README.md
 |   MODEL_CARD.md
 |   PROJECT_STRUCTURE.md
+|   README.md
 |   run_001_physics_layer.bat
 |   run_002_biology_calibration.bat
 |   run_003_neural_layer.bat
@@ -256,6 +257,7 @@ D:.
 |       RADBIO_NEURO_BACKUP_20260623_2037.zip
 |       RADBIO_NEURO_FULL_PROJECT_READY.zip
 |       RADBIO_NEURO_FULL_PROJECT_READY_VERIFIED.zip
+|       RADBIO_NEURO_FULL_PROJECT_READY_VERIFIED_POLISHED.zip
 |       
 +---radbio_neuro
 |   |   config.py
